@@ -2,8 +2,8 @@ let name = "Gökhan"
 let surname = "Arman"
 let isMarried = "Married"
 let age = 33
-let country = "Turkey"
-let city = "Denizli"
+let country = "Germany"
+let city = "Berlin"
 
 let person = `I am ${name} ${surname}. I am ${age} and ${isMarried}.`
 
