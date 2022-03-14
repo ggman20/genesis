@@ -20,3 +20,16 @@ let personInfoTwo = `I am ${fullName}. I am ${age}. I live in ${country}.` //ES6
 let personInfoThree = `I am ${fullName}. I live in ${city}, ${country}. I am a ${job}. I teach ${language}.`
 console.log(personInfoTwo)
 console.log(personInfoThree)
+//Casting Data Type
+let num = '10'
+let numInt = parseInt(num)
+console.log(numInt)
+let numInt2 = Number(num)
+console.log(numInt2)
+console.log(+'10')
+let numFloatStr ='9.81'
+let numFloat = parseFloat(numFloatStr)
+console.log(numFloat)
+let numFloat2 = Number(numFloatStr)
+console.log(numFloat2)
+console.log(+'9.81')
