@@ -1,3 +1,4 @@
+/*
 let num1 = prompt('Yasinizi giriniz')
 
 if (num1 >= 18) {
@@ -33,7 +34,7 @@ if (studentNote >= 80) {
 } else {
     console.log(`Ogrenci notu: ${studentNote}. Harf notu: F`)
 }
-
+*/
 let seasons = [
     'AUTUMN',
     'WINTER',
@@ -54,3 +55,4 @@ if (month1 == 8 || 9 || 10) {
 } else if (month1 == 5 || 6 || 7) {
     console.log(`The season is ${seasons[3]}.`)
 }
+
