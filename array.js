@@ -54,5 +54,8 @@ console.log(fruits.splice(1, 2))
 
 let myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon']
 console.log(myFish)
+console.log(myFish.length)
+console.log(myFish.splice(3))
+console.log(myFish)
 myFish.splice(3, 1, 'GG','gg')
 console.log(myFish)
