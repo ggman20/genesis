@@ -390,11 +390,52 @@ if((ages.length)%2 == 0){
     console.log(ages[medianAge])
 }
 //Find the average age(all items divided by number of items)
-sum = 0
+let sum = 0
 for (i = 0; i < ages.length; i++){
     sum = sum + ages[i]
 }
 console.log(sum)
-averageOfAges = sum / (ages.length)
+let averageOfAges = sum / (ages.length)
 console.log(averageOfAges)
 //Find the range of the ages(max minus min)
+let maxAge = ages[ages.length - 1]
+let minAge = ages[0]
+let rangeOfAges = maxAge - minAge
+console.log("Range:", rangeOfAges)
+//Compare the value of (min - average) and (max - average), use abs() method 
+
+
+//Slice the first ten countries from the countries array
+//console.log(countries.slice(0,10))
+
+//Find the middle country(ies) in the countries array
+let lengthOfCountries = countries.length
+console.log(lengthOfCountries)
+if (lengthOfCountries%2 == 0) {
+    let middleOfCountries1 = (lengthOfCountries/2)
+    let middleOfCountries2 = (lengthOfCountries/2) - 1
+    console.log(middleOfCountries1, middleOfCountries2)
+    console.log(countries[middleOfCountries1], countries[middleOfCountries2])
+} else {
+    let middleOfCountries = (Math.floor(lengthOfCountries/2))
+    console.log(middleOfCountries)
+    console.log(countries[middleOfCountries]) //Lesotho
+}
+
+//Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
+console.log(lengthOfCountries)
+if (lengthOfCountries%2 == 0) {
+    let divideTwo = lengthOfCountries / 2
+    let firstHalfOfCountries = countries.slice(0, divideTwo)
+    let secondHalfOfCountries = countries.slice(divideTwo)
+    console.log(firstHalfOfCountries)
+    console.log(secondHalfOfCountries)
+} else {
+    countries.unshift('BBB')
+    let divideTwo = (countries.length) / 2
+    countries.sort()
+    let firstHalfOfCountries = countries.slice(0, divideTwo)
+    let secondHalfOfCountries = countries.slice(divideTwo)
+    console.log(firstHalfOfCountries)
+    console.log(secondHalfOfCountries)
+}
