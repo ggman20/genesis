@@ -248,17 +248,73 @@ const countries = [
     'Japan',
     'Kenya'
   ]
-
-countriesLength = countries.length
+/*
+let countriesLength = countries.length
 countriesUpper = []
-countriesPush = []
 for (let i = 0;i < countriesLength;i++){
     countriesUpper += countries[i].toLocaleUpperCase() + ','
     
 }
 console.log(countriesUpper)
+console.log(typeof(countriesUpper))
+let countriesArray = countriesUpper.split(',')
+console.log(countriesArray)
+countriesArray.pop()
+console.log(countriesArray) //['ALBANİA', 'BOLİVİA', 'CANADA', 'DENMARK', 'ETHİOPİA', 'FİNLAND', 'GERMANY', 'HUNGARY', 'IRELAND', 'JAPAN', 'KENYA']
+*/
+
+//5. Using the above countries array, create an array for countries length.
+/*
+let countriesLength = countries.length
+let countriesStringLength = ''
+for(let i = 0;i < countriesLength;i++){
+    countriesStringLength += countries[i].length + ','
+}
+console.log(countriesStringLength)
+let countriesArrayLength = countriesStringLength.split(',')
+countriesArrayLength.pop()
+console.log(countriesArrayLength)
+*/
+
+//6. Use the countries array to create the following array of arrays:
+let countriesLength = countries.length
+const emptyArray = [[]]
+const fullArray = []
+    for (let i = 0;i < countriesLength;i++){        
+        let item = countries[i]
+        let itemLength = countries[i].length
+        let itemFirstThree = countries[i].substring(0,3)
+        let itemFirstThreeUpper = itemFirstThree.toUpperCase()
+        emptyArray.push(countries[i], itemFirstThreeUpper, itemLength)
+    }
+    
 
 
+    
+console.log(emptyArray)
+console.log(fullArray)
+
+
+
+
+
+// 7. In above countries array, check if there is a country or countries containing the word 'land'.
+// If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
+/*
+let countriesLength = countries.length
+const landArray = []
+const withoutlandArray = []
+for(let i = 0;i < countriesLength;i++){
+    let result = countries[i].includes('land')
+    if(result == true){       
+        landArray.push(countries[i])           
+    }else {       
+        withoutlandArray.push(countries[i])
+    }
+}
+console.log(landArray)
+console.log(withoutlandArray)
+*/
 
 
 
