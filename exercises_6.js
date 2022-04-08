@@ -1,5 +1,5 @@
 //LEVEL-1
-//Iterate 0 to 10 using for loop, do the same using while and do while loop
+// 1. Iterate 0 to 10 using for loop, do the same using while and do while loop
 /*for(let i = 0; i < 10; i++){
     console.log("for", i)
 }
@@ -17,7 +17,7 @@ do{
 }while(j < 10)
 */
 
-//Iterate 10 to 0 using for loop, do the same using while and do while loop
+// 2. Iterate 10 to 0 using for loop, do the same using while and do while loop
 /*
 for (let i = 10; i > 0; i--){
     console.log("for",i)
@@ -55,14 +55,14 @@ do{
 }while(j <= n)
 */
 
-//Write a loop that makes the following pattern using console.log():
+// 4. Write a loop that makes the following pattern using console.log():
 /*
 for(let j = 0; j <= 7;j++){
     console.log(j * '#')
 }
 */
 
-//Use loop to print the following pattern:
+// 5. Use loop to print the following pattern:
 /*
 for(let i = 0;i <= 10;i++){
     result = i * i
@@ -70,7 +70,7 @@ for(let i = 0;i <= 10;i++){
 }
 */
 
-//Using loop print the following pattern
+// 6. Using loop print the following pattern
 /*
 for(i = 0;i <= 10;i++){
     let karesi = i * i
@@ -78,7 +78,7 @@ for(i = 0;i <= 10;i++){
     console.log(i,karesi,kupu)
 }
 */
-//Use for loop to iterate from 0 to 100 and print only even numbers
+// 7. Use for loop to iterate from 0 to 100 and print only even numbers
 /*for(let i = 0;i <= 100; i++){
     if (i%2 == 0){
         console.log(i)
@@ -87,7 +87,7 @@ for(i = 0;i <= 10;i++){
     }   
 }
 */
-//Use for loop to iterate from 0 to 100 and print only odd numbers
+// 8. Use for loop to iterate from 0 to 100 and print only odd numbers
 /*
 for(let i = 0;i <= 100; i++){
     if (i%2 == 1){
@@ -98,27 +98,14 @@ for(let i = 0;i <= 100; i++){
 }
 */
 
-//Use for loop to iterate from 0 to 100 and print only prime numbers
-/*const number1 = 7
-for(let i = 2;i < number1;i++){
-    if(number1%i == 0){
-        console.log('asal sayi degil')
-    }
-}
-*/
-/*
-for(let num = 2;num<=100;num++){
-    for (let i = 2;i <= num;i++){
-        if(num%i == 0){
-            console.log(num)
-        }else {
-            continue
-        }
-    }
+// 9. Use for loop to iterate from 0 to 100 and print only prime numbers
 
-}
-*/
-//Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+    
+
+
+
+
+// 10. Use for loop to iterate from 0 to 100 and print the sum of all numbers.
 /*
 let sum = 0
 for (let i = 0;i<=100;i++){
@@ -183,7 +170,7 @@ for (let i = 0; arr.length < 5;i++){
 }
 */
 
-//15. Develop a small script which generate a six characters random id:
+// 15. Develop a small script which generate a six characters random id:
 /*
 let result = '';
 let characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -197,7 +184,7 @@ console.log(result) //i6bfpr
 */
 
 //LEVEL-2
-//1. Develop a small script which generate any number of characters random id:
+// 1. Develop a small script which generate any number of characters random id:
 /*
 let result = '';
 let characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -210,7 +197,7 @@ for (let i = 0;i < randomNum;i++){
 console.log(result) //JTlrDVbmph8Wd6YiW9jWgixZ
 */
 
-//2. Write a script which generates a random hexadecimal number.
+// 2. Write a script which generates a random hexadecimal number.
 /*
 let result = '';
 let hexadecimalChars = '0123456789abcdef'
@@ -223,7 +210,7 @@ for (let i = 0;i < randomNum;i++){
 console.log(result) //35fd376e06
 */
 
-//3. Write a script which generates a random rgb color number.
+// 3. Write a script which generates a random rgb color number.
 /*
 for (let i = 0;i <= 2;i++){   
     let r = Math.floor(Math.random() * 255);
@@ -246,7 +233,7 @@ const countries = [
     'Hungary',
     'Ireland',
     'Japan',
-    'Kenya'
+    'Kenya',
   ]
 /*
 let countriesLength = countries.length
@@ -266,37 +253,27 @@ console.log(countriesArray) //['ALBANİA', 'BOLİVİA', 'CANADA', 'DENMARK', 'ET
 //5. Using the above countries array, create an array for countries length.
 /*
 let countriesLength = countries.length
-let countriesStringLength = ''
+let countriesStringLength = []
 for(let i = 0;i < countriesLength;i++){
-    countriesStringLength += countries[i].length + ','
+    countriesStringLength.push(countries[i].length)
 }
 console.log(countriesStringLength)
-let countriesArrayLength = countriesStringLength.split(',')
-countriesArrayLength.pop()
-console.log(countriesArrayLength)
+
 */
 
 //6. Use the countries array to create the following array of arrays:
+/*
 let countriesLength = countries.length
-const emptyArray = [[]]
-const fullArray = []
+const emptyArray = []
     for (let i = 0;i < countriesLength;i++){        
         let item = countries[i]
         let itemLength = countries[i].length
         let itemFirstThree = countries[i].substring(0,3)
         let itemFirstThreeUpper = itemFirstThree.toUpperCase()
-        emptyArray.push(countries[i], itemFirstThreeUpper, itemLength)
+        emptyArray.push([countries[i], itemFirstThreeUpper, itemLength])
     }
-    
-
-
-    
 console.log(emptyArray)
-console.log(fullArray)
-
-
-
-
+*/
 
 // 7. In above countries array, check if there is a country or countries containing the word 'land'.
 // If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
@@ -313,13 +290,61 @@ for(let i = 0;i < countriesLength;i++){
     }
 }
 console.log(landArray)
-console.log(withoutlandArray)
+console.log('All these countries are without land', withoutlandArray)
 */
 
+// 8. In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array.
+// If there is no country containing the word 'ai', print 'These are countries ends without ia'.
+/*
+let countriesLength = countries.length
+const countriesIA = []
+const countriesNoIA = []
+for(let i = 0;i < countriesLength; i++){
+    let result = countries[i].includes('ia')
+    if(result == true){
+        countriesIA.push(countries[i])
+        
+    }else {
+        countriesNoIA.push(countries[i])
+        
+    }
+}
+console.log(countriesIA)
+console.log(countriesNoIA)
+if(countriesNoIA.length == 0){
+    console.log('These are countries ends without ia')
+}
+*/
 
+// 9. Using the above countries array, find the country containing the biggest number of characters.
+/*
+let countriesLength = countries.length
+const countriesLengthArray = []
+for(let i = 0;i < countriesLength;i++){
+    countriesLengthArray.push(countries[i].length)
+}
+let countriesMinIndex = Math.min.apply(null, countriesLengthArray)
+let countriesMaxIndex = Math.max.apply(null, countriesLengthArray)
+let result = countriesLengthArray.indexOf(countriesMaxIndex)
+let countriesMax = countries[result]
+console.log(countriesMax) // Ethiopia
+*/
 
+// 10. Using the above countries array, find the country containing only 5 characters.
+/*
+let countriesLength = countries.length
+const countriesLengthArray = []
+const countriesIncludes5 = []
+for(let i = 0;i < countriesLength;i++){
+    countriesLengthArray.push(countries[i].length)
+    if(countriesLengthArray[i] == 5){
+       countriesIncludes5.push(countries[i])
+    }
+}
+console.log(countriesIncludes5)
+*/
 
-  
+// 11. Find the longest word in the webTechs array
   const webTechs = [
     'HTML',
     'CSS',
@@ -329,26 +354,386 @@ console.log(withoutlandArray)
     'Node',
     'MongoDB'
   ]
-  
+
   const mernStack = ['MongoDB', 'Express', 'React', 'Node']
-
-
-
 /*
-  for (let i = 0; i <= 10; i++){
-
-      console.log("for", countries[i])
-  }
-
-let j= 0
-while (j <= 10 ){
-    console.log("while", countries[j])
-    j++
+let webTechsLength = webTechs.length
+let webTechsLengthArray = []
+for(let i = 0;i < webTechsLength;i++){
+    webTechsLengthArray.push(webTechs[i].length)
+}
+console.log(webTechsLengthArray)
+let webTechsMaxLength = Math.max.apply(null, webTechsLengthArray)
+let webTechsMaxItem = []
+for(let j = 0;j<webTechsLength;j++){
+    if(webTechsLengthArray[j] == webTechsMaxLength){
+        webTechsMaxItem.push(webTechs[j])
+        
+    }
 }
 
-let k = 0
-do {
-    console.log("do while", countries[k])
-    k++
-} while(k <= 10)
+console.log(webTechsMaxItem)
+console.log(webTechsMaxItem.toString())
+*/
+
+// 12. Use the webTechs array to create the following array of arrays:
+/*
+let webTechsLength = webTechs.length
+let arr = []
+for(let i = 0;i < webTechsLength;i++){
+    arr.push([webTechs[i], webTechs[i].length])
+}
+console.log(arr)
+*/
+
+// 13. An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
+/*
+
+let webTechsLength = webTechs.length
+const newArr = []
+for (let i = 0;i < webTechsLength;i++){
+    for(j = 0;j < mernStack.length;j++){
+        //console.log(webTechs[i],mernStack[j])
+        if(webTechs[i].includes(mernStack[j]) == true){
+            newArr.push(webTechs[i])
+        }
+    }
+}
+console.log(newArr)
+
+for(let k = 0; k < newArr.length; k++){
+    console.log(newArr[k].concat(' MERN'))
+}
+*/
+
+// 14. Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
+/*
+for(let i = 0; i< webTechsLength; i++){
+    console.log(webTechs[i])
+}
+*/
+
+//15. This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+/*
+const fruit = ['banana', 'orange', 'mango', 'lemon']
+let n = fruit.length-1
+for(let i=0; i<=n/2; i++) {
+    let temp = fruit[i]
+    fruit[i] = fruit[n-i]
+    fruit[n-i] = temp
+}
+console.log(fruit)
+*/
+//16. Print all the elements of array as shown below.
+/*
+const fullStack = [
+    ['HTML', 'CSS', 'JS', 'React'],
+    ['Node', 'Express', 'MongoDB']
+  ]
+
+for(let i = 0;i < fullStack.length;i++){
+    for(let j = 0;j < fullStack[i].length;j++){
+        console.log(fullStack[i][j])
+    }  
+}
+*/
+const countries2 = [
+    'Afghanistan',
+    'Albania',
+    'Algeria',
+    'Andorra',
+    'Angola',
+    'Antigua and Barbuda',
+    'Argentina',
+    'Armenia',
+    'Australia',
+    'Austria',
+    'Azerbaijan',
+    'Bahamas',
+    'Bahrain',
+    'Bangladesh',
+    'Barbados',
+    'Belarus',
+    'Belgium',
+    'Belize',
+    'Benin',
+    'Bhutan',
+    'Bolivia',
+    'Bosnia and Herzegovina',
+    'Botswana',
+    'Brazil',
+    'Brunei',
+    'Bulgaria',
+    'Burkina Faso',
+    'Burundi',
+    'Cambodia',
+    'Cameroon',
+    'Canada',
+    'Cape Verde',
+    'Central African Republic',
+    'Chad',
+    'Chile',
+    'China',
+    'Colombi',
+    'Comoros',
+    'Congo (Brazzaville)',
+    'Congo',
+    'Costa Rica',
+    "Cote d'Ivoire",
+    'Croatia',
+    'Cuba',
+    'Cyprus',
+    'Czech Republic',
+    'Denmark',
+    'Djibouti',
+    'Dominica',
+    'Dominican Republic',
+    'East Timor (Timor Timur)',
+    'Ecuador',
+    'Egypt',
+    'El Salvador',
+    'Equatorial Guinea',
+    'Eritrea',
+    'Estonia',
+    'Ethiopia',
+    'Fiji',
+    'Finland',
+    'France',
+    'Gabon',
+    'Gambia, The',
+    'Georgia',
+    'Germany',
+    'Ghana',
+    'Greece',
+    'Grenada',
+    'Guatemala',
+    'Guinea',
+    'Guinea-Bissau',
+    'Guyana',
+    'Haiti',
+    'Honduras',
+    'Hungary',
+    'Iceland',
+    'India',
+    'Indonesia',
+    'Iran',
+    'Iraq',
+    'Ireland',
+    'Israel',
+    'Italy',
+    'Jamaica',
+    'Japan',
+    'Jordan',
+    'Kazakhstan',
+    'Kenya',
+    'Kiribati',
+    'Korea, North',
+    'Korea, South',
+    'Kuwait',
+    'Kyrgyzstan',
+    'Laos',
+    'Latvia',
+    'Lebanon',
+    'Lesotho',
+    'Liberia',
+    'Libya',
+    'Liechtenstein',
+    'Lithuania',
+    'Luxembourg',
+    'Macedonia',
+    'Madagascar',
+    'Malawi',
+    'Malaysia',
+    'Maldives',
+    'Mali',
+    'Malta',
+    'Marshall Islands',
+    'Mauritania',
+    'Mauritius',
+    'Mexico',
+    'Micronesia',
+    'Moldova',
+    'Monaco',
+    'Mongolia',
+    'Morocco',
+    'Mozambique',
+    'Myanmar',
+    'Namibia',
+    'Nauru',
+    'Nepal',
+    'Netherlands',
+    'New Zealand',
+    'Nicaragua',
+    'Niger',
+    'Nigeria',
+    'Norway',
+    'Oman',
+    'Pakistan',
+    'Palau',
+    'Panama',
+    'Papua New Guinea',
+    'Paraguay',
+    'Peru',
+    'Philippines',
+    'Poland',
+    'Portugal',
+    'Qatar',
+    'Romania',
+    'Russia',
+    'Rwanda',
+    'Saint Kitts and Nevis',
+    'Saint Lucia',
+    'Saint Vincent',
+    'Samoa',
+    'San Marino',
+    'Sao Tome and Principe',
+    'Saudi Arabia',
+    'Senegal',
+    'Serbia and Montenegro',
+    'Seychelles',
+    'Sierra Leone',
+    'Singapore',
+    'Slovakia',
+    'Slovenia',
+    'Solomon Islands',
+    'Somalia',
+    'South Africa',
+    'Spain',
+    'Sri Lanka',
+    'Sudan',
+    'Suriname',
+    'Swaziland',
+    'Sweden',
+    'Switzerland',
+    'Syria',
+    'Taiwan',
+    'Tajikistan',
+    'Tanzania',
+    'Thailand',
+    'Togo',
+    'Tonga',
+    'Trinidad and Tobago',
+    'Tunisia',
+    'Turkey',
+    'Turkmenistan',
+    'Tuvalu',
+    'Uganda',
+    'Ukraine',
+    'United Arab Emirates',
+    'United Kingdom',
+    'United States',
+    'Uruguay',
+    'Uzbekistan',
+    'Vanuatu',
+    'Vatican City',
+    'Venezuela',
+    'Vietnam',
+    'Yemen',
+    'Zambia',
+    'Zimbabwe'
+  ]
+//LEVEL-3
+// 1. Copy countries array(Avoid mutation)
+/*
+console.log(countries)
+let countriesCopy = []
+for(let i = 0; i < countries.length;i++){
+    countriesCopy[i] = countries[i]
+}
+console.log(countriesCopy)
+*/
+
+// 2. Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
+/*
+let webTechsCopy = []
+for(let i = 0;i < webTechs.length;i++){
+    webTechsCopy[i] = webTechs[i]
+}
+webTechsCopy.sort()
+console.log(webTechsCopy) //['CSS', 'HTML', 'JavaScript', 'MongoDB', 'Node', 'React', 'Redux']
+console.log(webTechs) // ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node', 'MongoDB']
+*/
+
+// 3. Sort the webTechs array and mernStack array
+/*
+let mernStackCopy = []
+for(let i = 0; i < mernStack.length;i++){
+    mernStackCopy[i] = mernStack[i]
+}
+mernStackCopy.sort()
+console.log(mernStackCopy) // ['Express', 'MongoDB', 'Node', 'React']
+*/
+
+// 4. Extract all the countries contain the word 'land' from the countries array and print it as array
+/*
+for(let i = 0; i < countriesCopy.length;i++){
+    let result = countriesCopy[i].includes('land')
+    if(result == true){
+        countriesCopy.splice(i,1)
+
+    }
+}
+console.log(countriesCopy) //['Albania', 'Bolivia', 'Canada', 'Denmark', 'Ethiopia', 'Germany', 'Hungary', 'Japan', 'Kenya']
+*/
+
+// 5. Find the country containing the hightest number of characters in the countries array
+/*
+let countries2Copy = []
+for(let i = 0;i < countries2.length;i++){
+    countries2Copy[i] = countries2[i]
+}
+let countries2CopyLength = countries2Copy.length
+const countries2CopyLengthArray = []
+for(let i = 0;i < countries2CopyLength;i++){
+    countries2CopyLengthArray.push(countries2Copy[i].length)
+}
+let countries2CopyMinIndex = Math.min.apply(null, countries2CopyLengthArray)
+let countries2CopyMaxIndex = Math.max.apply(null, countries2CopyLengthArray)
+let result = countries2CopyLengthArray.indexOf(countries2CopyMaxIndex)
+let countries2CopyMax = countries2Copy[result]
+console.log(countries2CopyMax)
+*/
+
+// 7. Extract all the countries containing only four characters from the countries array and print it as array
+/*
+let countriesWihoutFour = []
+let countriesLength = []
+for(let i = 0;i < countries2.length;i++){   
+    if(countries2[i].length == 4){
+        countriesLength.push(countries2[i])
+    }  
+}
+console.log(countriesLength)
+*/
+
+// 8. Extract all the countries containing two or more words from the countries array and print it as array
+/*
+let countriesLength = []
+for(let i = 0;i < countries2.length;i++){   
+    if(countries2[i].includes(' ') == true){
+        countriesLength.push(countries2[i])
+    }  
+}
+console.log(countriesLength)
+*/
+
+// 9. Reverse the countries array and capitalize each country and stored it as an array
+/*
+let countries22 = []
+for(let i = 0;i < countries2.length;i++){
+    countries22[i] = countries2[i]
+}
+
+let countries22Reverse = []
+let n = countries22.length - 1
+for(let i = 0;i < n/2;i++){
+    let temp = countries22[i]
+    countries22[i] = countries22[n-i]
+    countries22[n-i] = temp
+}
+console.log(countries22)
+for(let i = 0;i < countries22.length;i++){
+    countries22Reverse.push(countries22[i].toUpperCase())
+}
+console.log(countries22Reverse)
 */
