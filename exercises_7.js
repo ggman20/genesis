@@ -624,32 +624,87 @@ let numberForPrime = prompt('Bir sayi yaziniz asal sayi icin')
 function isPrime(numberForPrime){
     let isPrime1 = true
     for(let i = 2; i < numberForPrime;i++){
-        console.log(i)
         if(numberForPrime % i == 0){
+            console.log('Burada')
             isPrime1 = false           
             break
+        }
     }
     if(isPrime1 == false){
         console.log(`${numberForPrime} is not a prime number`)
     }
+    if(isPrime1 == true){
+        console.log(`${numberForPrime} is a prime number`)
+    }
+
 }
-}
+
 isPrime(numberForPrime)
 
 // 16. Write a functions which checks if all items are unique in the array.
 function unique(...arr){
+    arr.sort()
     isUnique = true
     for(let i = 0;i < arr.length;i++){
-        console.log(arr[i], arr[i+1])
         if(arr[i] == arr[i+1]){
-            console.log(arr[i], arr[i+1])
             isUnique = false
             break
         } 
     }
-    console.log(isUnique)
     if(isUnique == false){
         console.log(`arr is not an unique array`)
-    }       
+    }
+    if(isUnique == true){
+        console.log(`arr is an unique array`)
+    }
 }
-unique(1,2,3,4,5)
+unique(5,2,3,4,5)
+
+// 17. Write a function which checks if all the items of the array are the same data type.
+function checkSameDataType(...arr){
+    isSameDataType = true
+    for(let i = 0;i < arr.length - 1;i++){
+        if(typeof arr[i] != typeof arr[i+1]){
+            console.log('burada')
+            isSameDataType = false
+            break
+        }
+    }
+    if(isSameDataType == true){
+        console.log(`all the items of the array are the same data type`)
+    }
+    if(isSameDataType == false){
+        console.log(`all the items of the array are not the same data type`)
+    }
+    
+}
+checkSameDataType(1, 2, 3, 4, 5, 6, 7, [2,3], 'kek')
+
+// 18. JavaScript variable name does not support special characters or symbols except $ or _. 
+//     Write a function isValidVariable which check if a variable is valid or invalid variable.
+function isValidVariable(variable){
+
+}
+
+// 19. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+function sevenRandomNumbers(array){
+    const sevenNumberArray = [] 
+    for(let i = 0; sevenNumberArray.length < 7 ; i++){
+        let randomNumber = Math.floor(Math.random() * array.length)
+        if(typeof array[randomNumber] == 'number'){          
+           if(sevenNumberArray.includes(array[randomNumber]) == false){
+            sevenNumberArray.push(array[randomNumber]) 
+           }                
+        }
+    }
+    return sevenNumberArray
+}
+console.log(sevenRandomNumbers([1,'kek',12,'GG',33,14,15,'YEAAH',42,17,83,[1,2,3],9,'2','3']))
+
+// 20. Write a function called reverseCountries, it takes countries array and first it copy the array and returns the reverse of the original array
+
+function reverseCountries(countries){
+    console.log(countries)
+}
+
+reverseCountries(['Germany', 'USA'])
