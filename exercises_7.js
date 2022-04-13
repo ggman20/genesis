@@ -406,3 +406,250 @@ function userIdGenerator(){
     return console.log(randomsevenchars)
 }
 userIdGenerator()
+
+// LEVEL-3
+// 1. Modify the userIdGenerator function. Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). 
+//    One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+let numberOfChar = prompt('Number of Characters')
+let numberOfId = prompt('Number of Id')
+function userIdGeneratedByUser(numberOfChar, numberOfId){   
+    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'   
+    let randomIds = '' 
+    for(let i = 0;i < numberOfId;i++){
+        randomIds += '\n'
+        for(let k = 0;k < numberOfChar;k++){
+            let randomNumberChar = Math.floor(Math.random() * characters.length)
+            randomIds += characters.charAt(randomNumberChar)           
+        }
+    }
+    return console.log("ids:", randomIds)
+}
+userIdGeneratedByUser(numberOfChar, numberOfId)
+
+// 2. Write a function name rgbColorGenerator and it generates rgb colors.
+function rgbColorGenerator(){
+    let rgbNumbers = 0
+    for(let i = 0;i<3;i++){
+        let randomNumberForRgb = Math.floor(Math.random() * 256)
+        rgbNumbers += randomNumberForRgb
+        if(i !=2) rgbNumbers += ','
+    }
+    let rgb = 'rgb('+ rgbNumbers + ')'
+    return console.log(rgb)
+}
+rgbColorGenerator()
+
+// 3. Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
+let howManyHexaColor = prompt('How many random hexa color do you want?')
+function arrayOfHexaColors(){ 
+    let hexDigits = "0123456789ABCDEF"
+    let hexColor1 = ''
+    let hexColor2 = '' 
+    for(k = 0;k<howManyHexaColor;k++){  
+        hexColor1 += ' #'     
+        for(let i = 0;i<6;i++){
+            let randomNumber = Math.floor(Math.random() * hexDigits.length)
+            hexColor1 += hexDigits.charAt(randomNumber)
+        }
+        
+    } 
+    const hexaColorArray = hexColor1.split(' ')
+    hexaColorArray.shift()
+    return console.log(hexaColorArray)
+}
+arrayOfHexaColors()
+
+// 4. Write a function arrayOfRgbColors which return any number of RGB colors in an array.
+let howManyRgbColor = prompt('How many random RGB Color do you want?')
+function arrayOfRgbColors(){
+    let rgbColor = ''
+    for(let k = 0;k < howManyRgbColor;k++){
+        rgbColor += 'rgb('
+        for(let i = 0;i < 3; i++){
+            let randomNumberForRgb = Math.floor(Math.random() * 256)
+            rgbColor += randomNumberForRgb
+            if(i != 2) rgbColor += ','
+        }
+        rgbColor += ') '
+    }
+    console.log(rgbColor)
+    const rgbColorArray = rgbColor.split(' ')
+    rgbColorArray.pop()   
+    return console.log(rgbColorArray)
+}
+arrayOfRgbColors()
+
+// 5. Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
+function convertHexaToRgb(hex){
+    const r = parseInt(hex.slice(1, 3), 16)
+    const g = parseInt(hex.slice(3, 5), 16)
+    const b = parseInt(hex.slice(5, 7), 16)
+    return [r, g, b]
+}
+console.log(convertHexaToRgb('#1212AA'))
+
+// 6. Write a function convertRgbToHexa which converts rgb to hexa color and it returns an hexa color.
+function convertRgbToHexa(r, g, b){
+    let hexr = r.toString(16)
+    let hexg = g.toString(16)
+    let hexb = b.toString(16)
+    hexr.length == 1 ? hexr = "0" + hexr : hexr = hexr
+    hexg.length == 1 ? hexg = "0" + hexg : hexg = hexg
+    hexb.length == 1 ? hexb = "0" + hexb : hexb = hexb
+    let hexaNumber = '#' + hexr + hexg + hexb
+    return hexaNumber
+}
+
+console.log(convertRgbToHexa(10,20,30))
+
+// 7. Write a function generateColors which can generate any number of hexa or rgb colors
+function generateColors(color, howMany){
+    let colorArray = []
+    if (color == 'hexa'){
+        let hexDigits = "0123456789ABCDEF"
+    let hexColor1 = ''
+    let hexColor2 = '' 
+    for(k = 0;k<howMany;k++){  
+        hexColor1 += ' #'     
+        for(let i = 0;i<6;i++){
+            let randomNumber = Math.floor(Math.random() * hexDigits.length)
+            hexColor1 += hexDigits.charAt(randomNumber)
+        }   
+    } 
+    const hexaColorArray = hexColor1.split(' ')
+    hexaColorArray.shift()
+    colorArray = hexaColorArray
+
+    }else if(color == 'rgb'){
+        let rgbColor = ''
+    for(let k = 0;k < howMany;k++){
+        rgbColor += 'rgb('
+        for(let i = 0;i < 3; i++){
+            let randomNumberForRgb = Math.floor(Math.random() * 256)
+            rgbColor += randomNumberForRgb
+            if(i != 2) rgbColor += ','
+        }
+        rgbColor += ') '
+    }
+    console.log(rgbColor)
+    const rgbColorArray = rgbColor.split(' ')
+    rgbColorArray.pop()   
+    colorArray = rgbColorArray
+    }
+    return colorArray
+}
+console.log(generateColors('hexa', 5))
+
+// 8. Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array
+function shuffleArray2(array) {
+    let m = array.length
+    let temp = 0
+    let randomNumber = 0
+    // While there remain elements to shuffle…
+    for(let i = 0;i < m;i++) { 
+      // Pick a remaining element…
+      randomNumber = Math.floor(Math.random() * m--); 
+      // And swap it with the current element.
+      temp = array[m];
+      array[m] = array[randomNumber];
+      array[randomNumber] = temp;
+    }
+    return array;
+  }
+  console.log(shuffleArray2(['A',10,'B','20',30,'C',40]))
+
+// 9. Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number.
+let f = [];
+function factorial(n){
+  if (n == 0 || n == 1)
+    return 1;
+  if (f[n] > 0)
+    return f[n];
+  return f[n] = factorial(n-1) * n;
+}
+console.log(factorial(8))
+
+// 10. Call your function isEmpty, it takes a parameter and it checks if it is empty or not
+function isEmpty(){
+
+}
+
+// 11. Call your function sum, it takes any number of arguments and it returns the sum.
+function sumfunction(...arr){
+    let sum = 0
+    for(let i = 0; i < arr.length;i++){
+        sum = sum + arr[i]
+    }
+    return sum
+}
+console.log(sumfunction(1,2,3,4,5,6))
+
+// 12. Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items. 
+//     Check if all the array items are number types. If not give return reasonable feedback.
+function sumfunction(...arr){
+    let sum = 0
+    for(let i = 0; i < arr.length;i++){
+        sum = sum + arr[i]
+    }
+    return sum
+}
+console.log(sumfunction(1,2,3,4,5,6))
+
+// 13. Write a function called average, it takes an array parameter and returns the average of the items. 
+//     Check if all the array items are number types. If not give return reasonable feedback.
+function average(...arr){
+    let sum = 0
+    for(let i = 0; i < arr.length;i++){
+        sum = sum + arr[i]
+    }
+    let averaj = sum / arr.length
+    return averaj
+}
+console.log(average(1,2,3,4,5))
+
+// 14. Write a function called modifyArray takes array as parameter and modifies the fifth item of the array and return the array. 
+//     If the array length is less than five it return 'item not found'.
+function modifyArray(modify, ...arr){
+    if(arr.length < 5){
+        console.log('item not found')
+    }else{
+        arr[4] = modify
+    }
+    return arr
+}
+console.log(modifyArray(20,3,5,8,10,11,21))
+
+// 15. Write a function called isPrime, which checks if a number is prime number.
+let numberForPrime = prompt('Bir sayi yaziniz asal sayi icin')
+function isPrime(numberForPrime){
+    let isPrime1 = true
+    for(let i = 2; i < numberForPrime;i++){
+        console.log(i)
+        if(numberForPrime % i == 0){
+            isPrime1 = false           
+            break
+    }
+    if(isPrime1 == false){
+        console.log(`${numberForPrime} is not a prime number`)
+    }
+}
+}
+isPrime(numberForPrime)
+
+// 16. Write a functions which checks if all items are unique in the array.
+function unique(...arr){
+    isUnique = true
+    for(let i = 0;i < arr.length;i++){
+        console.log(arr[i], arr[i+1])
+        if(arr[i] == arr[i+1]){
+            console.log(arr[i], arr[i+1])
+            isUnique = false
+            break
+        } 
+    }
+    console.log(isUnique)
+    if(isUnique == false){
+        console.log(`arr is not an unique array`)
+    }       
+}
+unique(1,2,3,4,5)
