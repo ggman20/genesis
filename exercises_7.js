@@ -704,7 +704,13 @@ console.log(sevenRandomNumbers([1,'kek',12,'GG',33,14,15,'YEAAH',42,17,83,[1,2,3
 // 20. Write a function called reverseCountries, it takes countries array and first it copy the array and returns the reverse of the original array
 
 function reverseCountries(countries){
-    console.log(countries)
+    const copyCountries = []
+    for (i = 0; i < countries.length; i++) {
+        copyCountries[i] = countries[i];
+        }
+    const reverseCountries = countries.reverse()
+    return reverseCountries
+
 }
 
-reverseCountries(['Germany', 'USA'])
+console.log(reverseCountries(['Germany', 'USA', 'Ireland', 'Finland', 'Norway', 'Denmark', 'England']))
